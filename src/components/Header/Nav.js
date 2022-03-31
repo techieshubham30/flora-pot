@@ -1,6 +1,8 @@
 import "./nav.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../../context/CartContext";
 const Nav = () => {
+  const {state:{cart}} = useCart();
   return (
     <header className="header">
       <nav className="navbar">
@@ -32,8 +34,8 @@ const Nav = () => {
               <span class="badge-icon">4</span>
             </div>
             <div class="badge-container">
-              <Link to="/" class="fas fa-shopping-cart"></Link>
-              <span class="badge-icon">2</span>
+              <Link to="/cart" class="fas fa-shopping-cart"></Link>
+              <span class="badge-icon">{cart.length}</span>
             </div>
           </div>
         </div>

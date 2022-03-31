@@ -10,7 +10,7 @@ const Filter=()=>{
         <div className="product-filter-container">
             <div className="filter-titles">
                 <span className="filter">FILTERS</span>
-                <span className="clear-all-btn" onClick={()=>dispatch({type:"clear_all"})}>CLEAR ALL</span>
+                <span className="clear-all-btn" onClick={()=>dispatch({type:"CLEAR_ALL"})}>CLEAR ALL</span>
             </div>
 
             <ul className="filter-section">
@@ -44,7 +44,7 @@ const Filter=()=>{
                 <li>
                     <label className="form-label">
                         <input type="checkbox" class="form-checkbox-field"
-                            onChange={()=>dispatch({type:"air_purifier_plants"})}
+                            onChange={()=>dispatch({type:"AIR_PURIFIER_PLANTS"})}
                             checked={byCategory.air_purifier}
                         />
                         Air Purifier Plants
@@ -53,7 +53,7 @@ const Filter=()=>{
                 <li>
                     <label className="form-label">
                         <input type="checkbox" class="form-checkbox-field"
-                             onChange={()=>dispatch({type:"indoor_plants"})}
+                             onChange={()=>dispatch({type:"INDOOR_PLANTS"})}
                             checked={byCategory.indoor_plants}
                         />
                         Indoor Plants
@@ -62,7 +62,7 @@ const Filter=()=>{
                 <li>
                     <label className="form-label">
                         <input type="checkbox" class="form-checkbox-field"
-                              onChange={()=>dispatch({type:"outdoor_flower_plants"})}
+                              onChange={()=>dispatch({type:"OUTDOOR_FLOWER_PLANTS"})}
                               checked={byCategory.outdoor_flower_plants}
                         />
                         Outdoor Flower Plants
@@ -71,7 +71,7 @@ const Filter=()=>{
                 <li>
                     <label className="form-label">
                         <input type="checkbox" className="form-checkbox-field"
-                             onChange={()=>dispatch({type:"plants_for_gifts"})}
+                             onChange={()=>dispatch({type:"PLANTS_FOR_GIFTS"})}
                               checked={byCategory.plants_for_gifts}
                         />
                         Plants For Gift
@@ -85,7 +85,7 @@ const Filter=()=>{
                 <li>
                     <label className="form-label">
                         <input type="checkbox" class="form-checkbox-field"
-                            onChange={()=>dispatch({type:"thronic"})}
+                            onChange={()=>dispatch({type:"THRONIC"})}
                             checked={byBrand.thronic}
                         />
                         Thronic
@@ -94,7 +94,7 @@ const Filter=()=>{
                 <li>
                     <label className="form-label">
                         <input type="checkbox" className="form-checkbox-field"
-                             onChange={()=>dispatch({type:"ferns_n_petals"})}
+                             onChange={()=>dispatch({type:"FERNS_N_PETALS"})}
                             checked={byBrand.ferns_n_petals}
                         />
                         Ferns N Petals
@@ -103,7 +103,7 @@ const Filter=()=>{
                 <li>
                     <label className="form-label">
                         <input type="checkbox" className="form-checkbox-field"
-                              onChange={()=>dispatch({type:"abana_homes"})}
+                              onChange={()=>dispatch({type:"ABANA_HOMES"})}
                               checked={byBrand.abana_homes}
                         />
                         Abana Homes
@@ -112,7 +112,7 @@ const Filter=()=>{
                 <li>
                     <label className="form-label">
                         <input type="checkbox" class="form-checkbox-field"
-                               onChange={()=>dispatch({type:"root_bridges"})}
+                               onChange={()=>dispatch({type:"ROOT_BRIDGES"})}
                                checked={byBrand.root_bridges}
                         />
                         Root Bridges
