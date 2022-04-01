@@ -4,9 +4,11 @@ const filterReducer = (state, action) => {
   switch (action.type) {
     case "Sort_By_Price":
       return { ...state, SortBy: action.payload };
+
     case "Filter_By_Rating":
       return { ...state, byRating: action.payload };
-    case "air_purifier_plants":
+
+    case "AIR_PURIFIER_PLANTS":
       return {
         ...state,
         byCategory: {
@@ -14,7 +16,7 @@ const filterReducer = (state, action) => {
           air_purifier: !state.byCategory.air_purifier,
         },
       };
-    case "indoor_plants":
+    case "INDOOR_PLANTS":
       return {
         ...state,
         byCategory: {
@@ -22,7 +24,7 @@ const filterReducer = (state, action) => {
           indoor_plants: !state.byCategory.indoor_plants,
         },
       };
-    case "outdoor_flower_plants":
+    case "OUTDOOR_FLOWER_PLANTS":
       return {
         ...state,
         byCategory: {
@@ -30,7 +32,7 @@ const filterReducer = (state, action) => {
           outdoor_flower_plants: !state.byCategory.outdoor_flower_plants,
         },
       };
-    case "plants_for_gifts":
+    case "PLANTS_FOR_GIFTS":
       return {
         ...state,
         byCategory: {
@@ -39,13 +41,13 @@ const filterReducer = (state, action) => {
         },
       };
 
-    case "thronic":
+    case "THRONIC":
       return {
         ...state,
         byBrand: { ...state.byBrand, thronic: !state.byBrand.thronic },
       };
 
-    case "ferns_n_petals":
+    case "FERNS_N_PETALS":
       return {
         ...state,
         byBrand: {
@@ -54,7 +56,7 @@ const filterReducer = (state, action) => {
         },
       };
 
-    case "root_bridges":
+    case "ROOT_BRIDGES":
       return {
         ...state,
         byBrand: {
@@ -62,13 +64,13 @@ const filterReducer = (state, action) => {
           root_bridges: !state.byBrand.root_bridges,
         },
       };
-    case "abana_homes":
+    case "ABANA_HOMES":
       return {
         ...state,
         byBrand: { ...state.byBrand, abana_homes: !state.byBrand.abana_homes },
       };
 
-    case "clear_all":
+    case "CLEAR_ALL":
       return initialState;
     default:
       return state;

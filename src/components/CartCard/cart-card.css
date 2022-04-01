@@ -1,0 +1,154 @@
+.cart-heading{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--primary-color);
+    opacity: 0.90;
+    margin-top: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    text-transform:uppercase;
+}
+
+.products{
+    width: 100%;
+}
+.horizontal-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    height: 230px;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    gap: 3rem;
+    padding: 2rem;
+    height: auto;
+   
+}
+
+.horizontal-card-image-wrapper{
+    width: 20%;
+}
+
+
+
+.product-info{
+    padding: 2rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.product-name,.product-price,.product-quantity,.product-sub-info{
+    margin-bottom: 0.8rem;
+    opacity: 0.80;
+    
+}
+
+.product-decription{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.product-discount{
+    color: var(--primary-color);
+}
+
+.product-sub-info{
+ color:var(--grey-color);
+}
+.product-buttons{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.product-buttons .btn{
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.product-buttons .btn:hover{
+    background-color: var(--light-black);
+}
+
+.cart{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    align-items: flex-start;
+}
+
+.total-cart{
+    width: 30%;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    margin-top: 5rem;
+}
+
+.price-details{
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--grey-color)
+}
+.total-price,.total-discount,.delivery-charges{
+    font-size: 1.7rem;
+    margin-bottom: 1.3rem;
+}
+.flex-row{
+    display: flex;
+    justify-content: space-between;
+}
+.delivery-charges{
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--grey-color) ;
+}
+
+.total-amt{
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--grey-color) ;
+    margin-bottom: 1rem;
+}
+
+.placeorder-btn{
+    width: 100%;
+    letter-spacing: 2px;
+    padding: 1.2rem 2rem;
+    font-weight: bold;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.placeorder-btn:hover{
+    background-color: var(--light-black);
+}
+
+
+.wrapper1{
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+    width: 80%;
+    margin: 0 auto 12rem auto;
+
+}
+
+.convenience-price{
+    display: flex;
+    gap: 0.7rem;
+}
+
+.line-through{
+    text-decoration: line-through;
+    
+}
+
+.text-color-primary{
+    color: var(--primary-color);
+}

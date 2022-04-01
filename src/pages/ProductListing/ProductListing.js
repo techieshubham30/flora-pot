@@ -26,7 +26,7 @@ const ProductListing = () => {
       <Filter />
       <div className="product-container">
         {sortByBrand.map((product) => (
-          <ProductCard products={product} />
+          <ProductCard products={product}/>
         ))}
       </div>
     </div>
