@@ -1,8 +1,13 @@
 import { useCart } from "../../context/CartContext";
+import { useWishlist } from "../../context/WishlistContext";
+import { Wishlist } from "../../pages/Wishlist/Wishlist";
 import "./cart-card.css";
 const CartCard = ({ card }) => {
-  const { price, discount, discountPrice, decription, image } = card;
+  const { price, discount, discountPrice, decription, image, _id } = card;
   const { setCart } = useCart();
+  const {state:{wishlist},
+   setWishlist
+  } = useWishlist();
   return (
     <div className="horizontal-card">
       <div className="horizontal-card-image-wrapper">
@@ -47,7 +52,35 @@ const CartCard = ({ card }) => {
             Remove
           </button>
 
-          <button className="btn">Move To Wishlist</button>
+          {
+
+            wishlist.some((p)=>p._id===card._id) ? (
+              <button className="btn" onClick={()=>{
+                setWishlist({
+                 type:"REMOVE_FROM_WISHLIST",
+                 payload:card
+               })
+             
+              }} >Move To Wishlist
+             </button>
+            ) : (
+              <button className="btn" onClick={()=>{
+                setWishlist({
+                 type:"ADD_TO_WISHLIST",
+                 payload:card
+               })
+
+               setCart({
+                type: "REMOVE_FROM_CART",
+                payload: card,
+              })
+
+              }} >Move To Wishlist
+             </button>
+            )
+
+          }
+
         </div>
       </div>
     </div>

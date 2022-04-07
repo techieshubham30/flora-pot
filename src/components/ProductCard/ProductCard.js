@@ -1,4 +1,5 @@
 import { useCart } from "../../context/CartContext";
+import { useWishlist } from "../../context/WishlistContext";
 import "./product-card.css";
 const ProductCard = ({ products }) => {
   const {
@@ -6,11 +7,31 @@ const ProductCard = ({ products }) => {
     setCart,
   } = useCart();
 
+  const {
+    state: {wishlist},
+    setWishlist
+  } = useWishlist();
+
   return (
     <div className="card-vertical">
-      <div className="vertical-card-icon">
+     
+      {
+        wishlist.some((p)=>p._id === products._id)? (
+          <div className="vertical-card-icon" onClick={()=>setWishlist({
+           type:"REMOVE_FROM_WISHLIST",
+           payload:products
+      })} >
+        <a href="#" className="fas fa-heart"></a>
+      </div>
+        ):(
+          <div className="vertical-card-icon" onClick={()=>setWishlist({
+           type:"ADD_TO_WISHLIST",
+           payload:products
+      })} >
         <a href="#" class="fas fa-heart"></a>
       </div>
+        )
+      }
       <div className="card-image">
         <img src={products.image} />
       </div>
