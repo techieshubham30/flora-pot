@@ -1,8 +1,10 @@
 import "./nav.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
+import { useWishlist } from "../../context/WishlistContext";
 const Nav = () => {
   const {state:{cart}} = useCart();
+  const {state:{wishlist}} = useWishlist();
   return (
     <header className="header">
       <nav className="navbar">
@@ -30,8 +32,8 @@ const Nav = () => {
           <div class="icon-container">
             <Link to="/" class="fas fa-user-circle"></Link>
             <div class="badge-container">
-              <Link to="/" class="fas fa-heart"></Link>
-              <span class="badge-icon">4</span>
+              <Link to="/wishlist" class="fas fa-heart"></Link>
+              <span class="badge-icon">{wishlist.length}</span>
             </div>
             <div class="badge-container">
               <Link to="/cart" class="fas fa-shopping-cart"></Link>
