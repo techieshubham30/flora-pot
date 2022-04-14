@@ -1,10 +1,23 @@
 import "./nav.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import { useWishlist } from "../../context/WishlistContext";
+import { useAuth } from "../../context/AuthContext";
+import { signOut } from "../../services/signoutServices";
 const Nav = () => {
-  const {state:{cart}} = useCart();
-  const {state:{wishlist}} = useWishlist();
+  const naviagte = useNavigate();
+  const {
+    state: { cart },
+  } = useCart();
+  const {
+    state: { wishlist },
+  } = useWishlist();
+
+  const {
+    auth: { isAuthenticated },
+    setAuth,
+  } = useAuth();
+
   return (
     <header className="header">
       <nav className="navbar">
@@ -38,6 +51,20 @@ const Nav = () => {
             <div class="badge-container">
               <Link to="/cart" class="fas fa-shopping-cart"></Link>
               <span class="badge-icon">{cart.length}</span>
+            </div>
+            <div className="badge-container">
+              {!isAuthenticated ? (
+                <Link to="/login">
+                  <button className="signin-btn">Login</button>
+                </Link>
+              ) : (
+                <button
+                  className="signin-btn"
+                  onClick={() => signOut(naviagte, setAuth)}
+                >
+                  Logout
+                </button>
+              )}
             </div>
           </div>
         </div>

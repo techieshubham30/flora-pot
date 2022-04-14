@@ -85,6 +85,7 @@
 .icon-container {
     display: flex;
     gap: 2rem;
+   
 }
 
 .nav-right .icon-container a {
@@ -100,4 +101,21 @@
 .badge-container .badge-icon{
     width: 1.8rem;
     height: 1.8rem;
+}
+
+.signin-btn{
+    
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+
+}
+
+.signin-btn:hover{
+    background-color: var(--light-black);
+    color: var(--white-color);
 }
